@@ -9,4 +9,4 @@ homeassistant:
 logger:
   default: info
   logs:
-    custom_components.octopus_germany: debug
+    custom_components.octopus_italy: debug
