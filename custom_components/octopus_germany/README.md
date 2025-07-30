@@ -1,6 +1,6 @@
-# Octopus Germany Integration for Home Assistant
+# Octopus Italy Integration for Home Assistant
 
-This custom component integrates Octopus Germany services with Home Assistant, providing access to your energy account data, electricity prices, device control, and vehicle charging preferences.
+This custom component integrates Octopus Italy services with Home Assistant, providing access to your energy account data, electricity prices, device control, and vehicle charging preferences.
 
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
@@ -35,14 +35,14 @@ If you find this useful and are planning on moving to Octopus Energy Germany, wh
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
 1. Add this repository as a custom repository in HACS
-2. Search for ["Octopus Germany"](https://my.home-assistant.io/redirect/hacs_repository/?owner=thecem&repository=octopus_germany&category=integration) in the HACS integrations
+2. Search for ["Octopus Italy"](https://my.home-assistant.io/redirect/hacs_repository/?owner=ghianciulu&repository=octopus_italy&category=integration) in the HACS integrations
 3. Install the integration
 4. Restart Home Assistant
 5. Add the integration via the UI under **Settings** > **Devices & Services** > **Add Integration**
 
 ### Manual Installation
 
-1. Copy the `octopus_germany` directory to your Home Assistant `custom_components` directory
+1. Copy the `octopus_italy` directory to your Home Assistant `custom_components` directory
 2. Restart Home Assistant
 3. Add the integration via the UI under **Settings** > **Devices & Services** > **Add Integration**
 
@@ -51,8 +51,8 @@ If you find this useful and are planning on moving to Octopus Energy Germany, wh
 The integration is configured via the Home Assistant UI:
 
 1. Navigate to **Settings** > **Devices & Services**
-2. Click **+ ADD INTEGRATION** and search for "Octopus Germany"
-3. Enter your Octopus Energy Germany email and password
+2. Click **+ ADD INTEGRATION** and search for "Octopus Italy"
+3. Enter your Octopus Energy italy email and password
 4. The integration will automatically fetch your account number and set up the entities
 
 ## Entities
@@ -114,7 +114,7 @@ The integration is configured via the Home Assistant UI:
 
 ### Set Vehicle Charge Preferences
 
-- **Service ID**: `octopus_germany.set_vehicle_charge_preferences`
+- **Service ID**: `octopus_italy.set_vehicle_charge_preferences`
 - **Description**: Configure your vehicle's charging preferences
 - **Parameters**:
   - `account_number` (optional): Your Octopus Energy account number (uses account from configuration if not specified)
@@ -127,7 +127,7 @@ The integration is configured via the Home Assistant UI:
 
 ```yaml
 # Example automation to set vehicle charging preferences to 80% by 7:30 AM on weekdays and 90% by 9:00 AM on weekends
-service: octopus_germany.set_vehicle_charge_preferences
+service: octopus_italy.set_vehicle_charge_preferences
 data:
   weekday_target_soc: 80
   weekend_target_soc: 90
@@ -142,18 +142,18 @@ If you encounter issues, you can enable debug logging by adding the following to
 ```yaml
 logger:
   logs:
-    custom_components.octopus_germany: debug
+    custom_components.octopus_italy: debug
 ```
 
 ## Support
 
 For bug reports and feature requests, please open an issue on the GitHub repository.
-Before raising anything, please read through the [discussion](https://thecem.github.io/octopus_germany/discussions).
-If you have found a bug or have a feature request please [raise it](https://thecem.github.io/octopus_germany/issues) using the appropriate report template.
+Before raising anything, please read through the [discussion](https://ghianciulu.github.io/octopus_italy/discussions).
+If you have found a bug or have a feature request please [raise it](https://ghianciulu.github.io/octopus_italy/issues) using the appropriate report template.
 
 ## Sponsorship
 
-If you are enjoying the integration, why not use my [referral link](https://share.octopusenergy.de/free-cat-744)
+If you are enjoying the integration, why not use my [referral link](https://share.octopusenergy.it/free-cat-744)
 
 ## License
 
@@ -161,4 +161,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Disclaimer
 
-This integration is not officially affiliated with Octopus Energy Germany. Use at your own risk.
+This integration is not officially affiliated with Octopus Energy Italy. Use at your own risk.
